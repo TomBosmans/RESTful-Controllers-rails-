@@ -60,7 +60,6 @@ Let's say we want to move follow and unfollow to a new controller.
     resource :follows, module: 'users', only: [:create, :destroy]
   end
 ```
-> Where the fuck is this `module` thing coming from? Also why `follows` instead of `follow`? I'd also remove the `except: [:new]` since an example should be as simple as possible.
 
 Resulting in the following routes:
 ```batch
