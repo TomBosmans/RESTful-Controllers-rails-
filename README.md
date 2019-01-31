@@ -145,27 +145,7 @@ class ActivitiesController < ApplicationController
 end
 ```
 
-## Worth it?
-- :heavy\_check\_mark: Positive:
-  - Smaller controllers.
-  - Closer to [SOLID](https://en.wikipedia.org/wiki/SOLID)
-  - Being RESTful
-
-- :heavy\_multiplication\_x: Negative
-  - Cancan(can) `load_and_authorize_resource` will not work in the nested controllers.
-    - So you have to manually type `authorize! :action, object`.
-  - More initial work, so lazy devs will complain ;)
-  - Harder to grasp then adding custom actions
-  - Is it worth the effort?
-
-- Neutral
-  - [Service and Query objects](https://codeclimate.com/blog/7-ways-to-decompose-fat-activerecord-models/) also fix the big controllers.
-
 ## Sources:
 - https://dzone.com/articles/fighting-custom-actions-in-rails-controllers
 - http://jeromedalbert.com/how-dhh-organizes-his-rails-controllers/
 - https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
-- Discussions with Kostas and other ruby fans.
-
-## Services proof of concept:
-- https://git.solvace.com/solvace/solvace/merge_requests/1608
